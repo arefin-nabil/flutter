@@ -5,6 +5,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // data recieved here
+    final args = ModalRoute.of(context)?.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
         title: Text('Home page'),
@@ -74,18 +76,17 @@ class Home extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text('This is home page text',
+
+            /////// data shown here
+
+            Text("Hello Mr. ${args['name'].toString()}"
+                " Your phone No is: ${args['phone'].toString()}",
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text('This is home page text',
-              style: TextStyle(
-                fontSize: 50,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+
           ],
         ),
       ),

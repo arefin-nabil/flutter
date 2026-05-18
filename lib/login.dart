@@ -89,6 +89,19 @@ class LoginPage extends StatelessWidget {
                             }
                           },
                           child: Text('Submit'))),
+                  SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            if (_formKey.currentState!.validate()) { //! mane force kora
+                              Navigator.pushNamed(context, 'home', arguments: {
+                                'phone':phoneController.text,
+                                'pass': passwordController.text,
+                                'name':'Nabil Boss'
+                              });
+                            }
+                          },
+                          child: Text('Send Data'))),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
