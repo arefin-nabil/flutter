@@ -8,7 +8,58 @@ class GridV extends StatelessWidget {
         appBar: AppBar(
           title: Text('Grid view'),
         ),
-        body: GridView.builder(
+        body:
+
+
+        // GridView.count(
+        //     crossAxisCount: 3,
+        //     padding: EdgeInsets.all(10),
+        //     crossAxisSpacing: 10,
+        //     mainAxisSpacing: 10,
+        //     children: List.generate(
+        //       20,
+        //           (index) => Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Container(
+        //             width: 150,
+        //             height: 150,
+        //             decoration: BoxDecoration(
+        //               // color: Colors.teal,
+        //                 gradient: LinearGradient(
+        //                     colors: [Colors.red, Colors.red],
+        //                     begin: Alignment.topRight,
+        //                     end: Alignment.bottomRight),
+        //                 borderRadius: BorderRadius.circular(10),
+        //                 boxShadow: [
+        //                   BoxShadow(
+        //                       color: Colors.black,
+        //                       blurRadius: 10,
+        //                       offset: Offset(0, 10)),
+        //                   // BoxShadow(
+        //                   //     color: Colors.red,
+        //                   //     blurRadius: 10,
+        //                   //     offset: Offset(10,0)
+        //                   // )
+        //                 ]),
+        //             child: Column(
+        //               mainAxisAlignment: MainAxisAlignment.center,
+        //               children: [
+        //                 Icon(
+        //                   Icons.phone,
+        //                   size: 50,
+        //                   color: Colors.white,
+        //                 ),
+        //                 Text(
+        //                   'Phone',
+        //                   style: TextStyle(fontSize: 25, color: Colors.white),
+        //                 )
+        //               ],
+        //             )),
+        //       ),
+        //     )),
+        //
+
+        GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 crossAxisSpacing: 25,
@@ -58,52 +109,6 @@ class GridV extends StatelessWidget {
         )
 
 
-      // GridView.count(
-      //     crossAxisCount: 3,
-      //     padding: EdgeInsets.all(10),
-      //     crossAxisSpacing: 10,
-      //     mainAxisSpacing: 10,
-      //     children: List.generate(
-      //       10,
-      //       (index) => Padding(
-      //         padding: const EdgeInsets.all(8.0),
-      //         child: Container(
-      //             width: 150,
-      //             height: 150,
-      //             decoration: BoxDecoration(
-      //                 // color: Colors.teal,
-      //                 gradient: LinearGradient(
-      //                     colors: [Colors.red, Colors.red],
-      //                     begin: Alignment.topRight,
-      //                     end: Alignment.bottomRight),
-      //                 borderRadius: BorderRadius.circular(10),
-      //                 boxShadow: [
-      //                   BoxShadow(
-      //                       color: Colors.black,
-      //                       blurRadius: 10,
-      //                       offset: Offset(0, 10)),
-      //                   // BoxShadow(
-      //                   //     color: Colors.red,
-      //                   //     blurRadius: 10,
-      //                   //     offset: Offset(10,0)
-      //                   // )
-      //                 ]),
-      //             child: Column(
-      //               mainAxisAlignment: MainAxisAlignment.center,
-      //               children: [
-      //                 Icon(
-      //                   Icons.phone,
-      //                   size: 50,
-      //                   color: Colors.white,
-      //                 ),
-      //                 Text(
-      //                   'Phone',
-      //                   style: TextStyle(fontSize: 25, color: Colors.white),
-      //                 )
-      //               ],
-      //             )),
-      //       ),
-      //     )),
     );
   }
 }

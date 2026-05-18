@@ -35,12 +35,12 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Text('phone number'),
+                  Text('phone number dao'),
                   TextFormField(
                     controller: phoneController,
                     keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
-                        hintText: 'Phone number', border: OutlineInputBorder()),
+                        hintText: 'Phone number dilam', border: OutlineInputBorder()),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please enter phone number';
@@ -76,7 +76,7 @@ class LoginPage extends StatelessWidget {
                       width: 300,
                       child: ElevatedButton(
                           onPressed: () {
-                            if (_formKey.currentState!.validate()) {
+                            if (_formKey.currentState!.validate()) { //! mane force kora
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -89,6 +89,19 @@ class LoginPage extends StatelessWidget {
                             }
                           },
                           child: Text('Submit'))),
+                  SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            if (_formKey.currentState!.validate()) { //! mane force kora
+                              Navigator.pushNamed(context, 'home', arguments: {
+                                'phone':phoneController.text,
+                                'pass': passwordController.text,
+                                'name':'Nabil Boss'
+                              });
+                            }
+                          },
+                          child: Text('Send Data'))),
                   ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
