@@ -68,7 +68,7 @@ class Buttons extends StatelessWidget {
               onLongPress: (){
                 print('Long pressed');
               },
-              child: Text('this is child text')
+              child: Text('this is child text button but it is not so big why???')
 
             ),
             SizedBox(height: 20,),
