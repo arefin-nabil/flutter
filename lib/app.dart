@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/Theme/themes.dart';
+import 'package:flutter_course/StackPage.dart';
 import 'buttons.dart';
 import 'f_list.dart';
 import 'login.dart';
@@ -27,13 +28,14 @@ class MyApp extends StatelessWidget {
       // ),
       title: 'Class - 1',
       home: LoginPage(),
-      initialRoute: 'list',
+      initialRoute: 'stack',
       routes: {
         'login': (context)=> LoginPage(),
         'home': (context)=> Home(),
         'form':(context)=> input_txt(),
         'list': (context)=> FList(),
         'grid': (context)=> GridV(),
+        'stack': (context)=> StackPage(),
 
       },
     );
