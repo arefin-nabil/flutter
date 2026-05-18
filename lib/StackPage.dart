@@ -11,7 +11,17 @@ class StackPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
+
+
+
+
+
+
+
+
             Stack(
               children: [
                 Container(
