@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/Theme/themes.dart';
 import 'buttons.dart';
-import 'form_validation.dart';
+import 'f_list.dart';
+import 'login.dart';
 import 'gridV.dart';
 import 'home.dart';
 import 'text_input.dart';
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      theme: AppTheme.lightTheme,
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.darkTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
 
@@ -25,6 +27,15 @@ class MyApp extends StatelessWidget {
       // ),
       title: 'Class - 1',
       home: LoginPage(),
+      initialRoute: 'list',
+      routes: {
+        'login': (context)=> LoginPage(),
+        'home': (context)=> Home(),
+        'form':(context)=> input_txt(),
+        'list': (context)=> FList(),
+        'grid': (context)=> GridV(),
+
+      },
     );
   }
 }
